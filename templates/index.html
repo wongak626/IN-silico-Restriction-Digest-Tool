@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<!-- Latest compiled and minified CSS -->
+
+	
+	<body>
+		<hr>
+			Restriction Digest Tool
+		</hr>
+		
+		<form action = "http://localhost:5000/result" method = "POST">
+		  <fieldset>
+		    <div style = font-size:20px; font-weight:bold; margin-left:150px;>
+		    {{form.sequence_input.label}}<br>
+		    {{form.sequence_input}}
+		    <br>
+		    <br>
+		    {{form.enzyme.label}}<br>
+		    {{form.enzyme}}
+		    <br>
+		    <br>
+		    {{form.missed_cleavage.label}}<br>
+		    {{form.missed_cleavage}}
+		    <br>
+		    {{form.min_weight.label}}<br>
+		    {{form.min_weight}}
+		    <br>
+		    {{form.max_weight.label}}<br>
+		    {{form.max_weight}}
+		    <br>
+		    {{form.min_length.label}}<br>
+		    {{form.min_length}}
+		    <br>
+		    {{form.max_length.label}}<br>
+		    {{form.max_length}}
+		    <br>
+		    {{form.submit}}
+		    <br>
+		    </div>
+		  </fieldset>
+	</body>
+
+</html>

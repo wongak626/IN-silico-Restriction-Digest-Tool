@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<body>
+		<table border = 1>
+	
+			<tr>
+				<th>Peptide</th>
+				<th>Weight(Da)</th>
+				<th>Length(Amino Acids)</th>
+			</tr>
+			{% for key,(peptide_weight,peptide_length) in result.iteritems() %}
+			<tr>
+				<td>{{key}}</td>
+				<td>{{peptide_weight}}</td>
+				<td>{{peptide_length}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+	
+</html>
