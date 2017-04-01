@@ -48,5 +48,5 @@ This runs the program that allows you to access the front page through any inter
 
 ## Contact Information
 
-If there are any questions about this project, feel free to contact me at this email:
-Email: wongak626@gmail.com
+If there are any questions about this project, feel free to contact me:
+Email - wongak626@gmail.com
