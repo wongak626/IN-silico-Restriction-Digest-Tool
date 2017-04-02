@@ -1,7 +1,6 @@
 # In-*Silico* Restriction Digest Tool
 
-This simple program determines restriction cut sites for popular digests and returns peptides with their associated weight (in Da),
-and lengths. The program allows users to filter peptide results for length, weight, and also accounts for the amount missed cleavages. Based on the ExPASy's PeptideMass software tool.
+This simple program determines restriction cut sites on user inputted protein sequeqnces for many different restriction enzymes and returns digested peptides with their associated weight (in Da),and lengths (in amino acids). The program allows users to filter peptide results for length, weight, and also accounts for the amount of missed cleavages. Based on the ExPASy's PeptideMass software tool.
 
 ## Installation
 This program runs on python 2.7 or above. Mac OS X, Sierra has python 2.7 already installed. I suggest using python 2.7 instead of 
