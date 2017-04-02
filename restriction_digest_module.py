@@ -11,7 +11,29 @@ def TRYPSIN(sequence):
     if cut_sites[-1] != len(sequence):
         cut_sites.append(len(sequence))
     return cut_sites
-    
+
+def CNBR(sequence):
+	cut_sites = [0]
+	for i in range(0,len(sequence)-1):
+		if sequence[i] == 'M':
+			cut_sites.append(i+1)
+	
+	if cut_sites[-1] != len(sequence):
+		cut_sites.append(len(sequence))
+	return cut_sites
+	
+def LYSC(sequence):
+	cut_sites = [0]
+	for i in range(0,len(sequence)-1):
+		if sequence[i] == 'K':
+			cut_sites.append(i+1)
+	
+	if cut_sites[-1] != len(sequence):
+		cut_sites.append(len(sequence))
+	return cut_sites
+		
+
+
 def missed_cleavage(sequence,miss_cleavage,cut_sites):
     peptides = []
     if len(cut_sites) > 2:

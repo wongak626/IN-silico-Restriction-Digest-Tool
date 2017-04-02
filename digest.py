@@ -21,7 +21,13 @@ def result():
 		if enzyme == "Trypsin":
 			cut_sites = TRYPSIN(sequence_AA)
 			peptides = missed_cleavage(sequence_AA, missed_cleavage_number,cut_sites)
-	#		elif enzyme = "":
+		elif enzyme == "CNBr":
+			cut_sites = CNBR(sequence_AA)
+			peptides = missed_cleavage(sequence_AA, missed_cleavage_number,cut_sites)
+		elif enzyme == "Lys C":
+			cut_sites = LYSC(sequence_AA)
+			peptides = missed_cleavage(sequence_AA, missed_cleavage_number,cut_sites)
+				
 		
 		peptide_dict = peptide_dictionary(peptides)
 		min_weight = int(request.form['min_weight'])
