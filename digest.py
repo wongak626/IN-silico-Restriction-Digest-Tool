@@ -15,6 +15,8 @@ def index():
 def result():
 	if request.method == 'POST':
 		sequence_AA = str(request.form['sequence_input'])
+		if sequence_AA:
+			sequence_AA = sequence_AA.replace('\n','').replace('\r','')
 		enzyme = str(request.form['enzyme'])
 		missed_cleavage_number = int(request.form['missed_cleavage'])
 		# check specific enzyme and create cut sites
