@@ -43,7 +43,7 @@ After obtaining this repository, execute:
 ```
 python digest.py
 ```
-This runs the program that allows you to access the front page through any internet browser (chrome, firefox, safari, etc.).
+This inititates the program, and allows you to access the front page through any internet browser (chrome, firefox, safari, etc.).
 
 ## Future directions for this project
 - Adding FASTA file upload capability.
