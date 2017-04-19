@@ -46,12 +46,12 @@ python digest.py
 This runs the program that allows you to access the front page through any internet browser (chrome, firefox, safari, etc.).
 
 ## Future directions for this project
-- Fixing the input form for protein sequences, to be case in sensitive.
 - Adding FASTA file upload capability.
 - Convert functionality of the program to classes and methods.
 - Add more restriction enzymes to this program.
 - Improve aesthetic of HTML and CSS of home page.
 - Add this program to be hosted on web server.
+- Add quality check/ form validators
 
 ## Contact Information
 
