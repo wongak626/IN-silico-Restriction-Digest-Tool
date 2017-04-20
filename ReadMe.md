@@ -5,7 +5,7 @@ This simple program determines restriction cut sites on user inputted protein se
 ## Installation
 This program runs on python 2.7 or above. Mac OS X, Sierra has python 2.7 already installed. I suggest using python 2.7 instead of 
 python 3, because most extensions of flask aren't stable with the latest versions of python. A beginner tutorial of the installation of
-python can be found [here](https://wiki.python.org/moin/BeginnersGuide/Download). 
+python can be found [here](https://wiki.python.org/moin/BeginnersGuide/Download). This program also uses the Flask micro-webframework, and will need to be run in an virtual environment.
 
 ### Virtual environment for development
 In order to avoid compatability issues between different libraries for different projects, it is important to use a virtual environment.
