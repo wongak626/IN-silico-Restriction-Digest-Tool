@@ -39,7 +39,7 @@ Install Flask in this environment using the following command:
 ```
 pip install Flask
 ```
-After obtaining this repository, execute:
+After obtaining this repository, go into the project directory and execute:
 ```
 python digest.py
 ```
