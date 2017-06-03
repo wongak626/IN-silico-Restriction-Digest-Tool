@@ -45,6 +45,9 @@ python digest.py
 ```
 This inititates the program, and allows you to access the front page through any internet browser (chrome, firefox, safari, etc.).
 
+## Testing
+Currently, users are only allowed to copy and paste AA sequences into a webform for this project. I have included a sample AA sequence in the form of a fasta file to be used as a test case for this project: ALPHA_CRYSTALLIN.fasta.
+
 ## Future directions for this project
 - Adding FASTA file upload capability.
 - Convert functionality of the program to classes and methods.
