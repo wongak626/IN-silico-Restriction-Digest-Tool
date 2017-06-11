@@ -19,30 +19,21 @@ def result():
 			sequence_AA = sequence_AA.replace('\n','').replace('\r','')
 		enzyme = str(request.form['enzyme'])
 		missed_cleavage_number = int(request.form['missed_cleavage'])
-		# check specific enzyme and create cut sites
-		if enzyme == "Trypsin":
-			cut_sites = TRYPSIN(sequence_AA)
-			peptides = missed_cleavage(sequence_AA, missed_cleavage_number,cut_sites)
-		elif enzyme == "CNBr":
-			cut_sites = CNBR(sequence_AA)
-			peptides = missed_cleavage(sequence_AA, missed_cleavage_number,cut_sites)
-		elif enzyme == "Lys C":
-			cut_sites = LYSC(sequence_AA)
-			peptides = missed_cleavage(sequence_AA, missed_cleavage_number,cut_sites)
-				
-		
-		peptide_dict = peptide_dictionary(peptides)
 		min_weight = int(request.form['min_weight'])
 		max_weight = int(request.form['max_weight'])
 		min_length = int(request.form['min_length'])
 		max_length = int(request.form['max_length'])
-		result = {}
-		for peptide, (peptide_weight,peptide_length) in peptide_dict.iteritems():
-			peptide_weight = float(peptide_weight)
-			peptide_length = float(peptide_length)
-			if min_weight <= peptide_weight <= max_weight:
-				if min_length <= peptide_length <= max_length:
-					result[peptide] = [peptide_weight, peptide_length]
+		
+		input = digest(sequence_AA, missed_cleavage_number,min_weight, max_weight, min_length, max_length)
+		# check specific enzyme and create cut sites
+		if enzyme == "Trypsin":
+			result = input.peptide_filter(input.peptide_dictionary(input.missed_cleavage(input.TRYPSIN())))
+		elif enzyme == "CNBr":
+			result = input.peptide_filter(input.peptide_dictionary(input.missed_cleavage(input.CNBr())))
+		elif enzyme == "Lys C":
+			result = input.peptide_filter(input.peptide_dictionary(input.missed_cleavage(input.LYSC())))
+				
+		
 		
 		return render_template("results.html", result = result)
 	
