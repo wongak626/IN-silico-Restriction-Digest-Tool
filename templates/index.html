@@ -1,20 +1,41 @@
 <!DOCTYPE html>
-<html>
-	<head>
-	<!-- Latest compiled and minified CSS -->
+<html lang="en-US">
 
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Restriction Digest Tool</title>
+	<!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+	<!--Custom CSS-->
+	<link rel="stylesheet" href="css/mystyle.css" type="text/css">
+
+
+</head>
 	
 	<body>
-		<hr>
-			Restriction Digest Tool
-		</hr>
-		
+
+	<h1>
+		Digest your Protein Sequence
+	</h1>
+
+	<p>This tool was created to mimic Expasy's Restriction Enzyme Digest Tool. This application allows you digest user inputed protein sequences and filter your results by weight,length, missed cleavage sites, and the specific enzyme.</p>
+
 		<form action = "http://localhost:5000/result" method = "POST">
 		  <fieldset>
 		    <div style = font-size:20px; font-weight:bold; margin-left:150px;>
 		    {{form.sequence_input.label}}<br>
 		    {{form.sequence_input}}
 		    <br>
+		    <br>
+		    <div>
+		    	<label for="file">Choose file to upload</label>
+		    	<input type ="file" id="file" name="file" multiple>
+		    </div>
+			<div>
+				<button>Submit</button>
+			</div>
 		    <br>
 		    {{form.enzyme.label}}<br>
 		    {{form.enzyme}}
@@ -38,7 +59,20 @@
 		    {{form.submit}}
 		    <br>
 		    </div>
+		    <div>
+
+		    </div>
 		  </fieldset>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<p>By Alexander Wong</p>
 	</body>
+
+
 
 </html>

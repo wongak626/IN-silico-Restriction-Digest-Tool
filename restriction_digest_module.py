@@ -5,7 +5,6 @@ class digest(object):
 	def __init__(self, sequence, miss_cleavage, min_weight, max_weight, min_length, max_length):
 		self.sequence = str(sequence)
 		self.miss_cleavage = int(miss_cleavage)
-#		self.enzyme = str(enzyme)
 		self.min_weight = int(min_weight)
 		self.max_weight = int(max_weight)
 		self.min_length = int(min_length)
@@ -80,7 +79,6 @@ class digest(object):
 			peptide_weight = 0
 			for letter in peptide:
 				peptide_weight = AA_weight[letter] + peptide_weight
-			#peptide_weights.append(peptide_weight)
 			peptide_dictionary[peptide] = [peptide_weight, len(peptide)]
 		return peptide_dictionary
 	

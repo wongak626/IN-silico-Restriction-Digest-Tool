@@ -3,9 +3,7 @@
 This simple program determines restriction cut sites on user inputted protein sequeqnces for many different restriction enzymes and returns digested peptides with their associated weight (in Da),and lengths (in amino acids). The program allows users to filter peptide results for length, weight, and also accounts for the amount of missed cleavages. Based on the ExPASy's PeptideMass software tool.
 
 ## Installation
-This program runs on python 2.7 or above. Mac OS X, Sierra has python 2.7 already installed. I suggest using python 2.7 instead of 
-python 3, because most extensions of flask aren't stable with the latest versions of python. A beginner tutorial of the installation of
-python can be found [here](https://wiki.python.org/moin/BeginnersGuide/Download). This program also uses the Flask micro-webframework, and will need to be run in an virtual environment.
+This program runs on python 2.7 or above (https://wiki.python.org/moin/BeginnersGuide/Download). This program also uses the Flask micro-webframework, and will need to be run in an virtual environment.
 
 ### Virtual environment for development
 In order to avoid compatability issues between different libraries for different projects, it is important to use a virtual environment.
@@ -45,6 +43,9 @@ python digest.py
 ```
 This inititates the program, and allows you to access the front page through any internet browser (chrome, firefox, safari, etc.).
 
+## Deployment
+This web application has not been successfully deployed.
+
 ## Testing
 Currently, users are only allowed to copy and paste AA sequences into a webform for this project. I have included a sample AA sequence in the form of a fasta file to be used as a test case for this project: ALPHA_CRYSTALLIN.fasta.
 
@@ -58,5 +59,5 @@ Currently, users are only allowed to copy and paste AA sequences into a webform 
 
 ## Contact Information
 
-If there are any questions about this project, feel free to contact me:
+Feel free to contact me:
 Email - wongak626@gmail.com
