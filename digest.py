@@ -26,12 +26,20 @@ def result():
 		
 		input = digest(sequence_AA, missed_cleavage_number,min_weight, max_weight, min_length, max_length)
 		# check specific enzyme and create cut sites
-		if enzyme == "Trypsin":
-			result = input.peptide_filter(input.peptide_dictionary(input.missed_cleavage(input.TRYPSIN())))
-		elif enzyme == "CNBr":
-			result = input.peptide_filter(input.peptide_dictionary(input.missed_cleavage(input.CNBr())))
-		elif enzyme == "Lys C":
-			result = input.peptide_filter(input.peptide_dictionary(input.missed_cleavage(input.LYSC())))
+		enzymeDict = {
+			"Trypsin": input.peptide_filter(input.peptide_dictionary(input.missed_cleavage(input.TRYPSIN()))),
+			"CNBr": input.peptide_filter(input.peptide_dictionary(input.missed_cleavage(input.CNBr()))),
+			"Lys C": input.peptide_filter(input.peptide_dictionary(input.missed_cleavage(input.LYSC())))
+		}
+
+		result = enzymeDict[enzyme]
+		
+		# if enzyme == "Trypsin":
+		# 	result = input.peptide_filter(input.peptide_dictionary(input.missed_cleavage(input.TRYPSIN())))
+		# elif enzyme == "CNBr":
+		# 	result = input.peptide_filter(input.peptide_dictionary(input.missed_cleavage(input.CNBr())))
+		# elif enzyme == "Lys C":
+		# 	result = input.peptide_filter(input.peptide_dictionary(input.missed_cleavage(input.LYSC())))
 				
 		
 		
